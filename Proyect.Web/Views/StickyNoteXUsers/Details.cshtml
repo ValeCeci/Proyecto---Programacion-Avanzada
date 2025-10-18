@@ -1,0 +1,34 @@
+﻿@model Proyect.Data.StickyNoteXUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StickyNoteXUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StickyNote.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StickyNote.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StickyUserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,12 @@
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\bin\Debug\Proyect.Data.dll.config
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\bin\Debug\Proyect.Data.dll
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\bin\Debug\Proyect.Data.pdb
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\bin\Debug\EntityFramework.dll
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\bin\Debug\EntityFramework.xml
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\obj\Debug\Proyect.Data.csproj.AssemblyReference.cache
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\obj\Debug\Proyect.Data.csproj.CoreCompileInputs.cache
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\obj\Debug\Proyect..49A9455E.Up2Date
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\obj\Debug\Proyect.Data.dll
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Data\obj\Debug\Proyect.Data.pdb
