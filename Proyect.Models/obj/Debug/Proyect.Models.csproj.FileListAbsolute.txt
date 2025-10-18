@@ -1,0 +1,6 @@
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Models\bin\Debug\Proyect.Models.dll
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Models\bin\Debug\Proyect.Models.pdb
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Models\obj\Debug\Proyect.Models.csproj.AssemblyReference.cache
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Models\obj\Debug\Proyect.Models.csproj.CoreCompileInputs.cache
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Models\obj\Debug\Proyect.Models.dll
+C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Models\obj\Debug\Proyect.Models.pdb
