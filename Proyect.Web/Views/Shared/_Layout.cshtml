@@ -23,6 +23,18 @@
                     <li>@Html.ActionLink("Users", "Index", "Users", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("UserNote", "Index", "StickyNoteXUsers", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["UserID"] != null)
+                    {
+                        <li><a>@Html.Encode(Session["Username"] ?? Session["UserEmail"])</a></li>
+                        <li><a href="@Url.Action("Logout","Auth")">Cerrar sesión</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("Login","Auth")">Iniciar sesión</a></li>
+                        <li><a href="@Url.Action("Register","Auth")">Registrarse</a></li>
+                    }
+                </ul>
             </div>
         </div>
     </nav>
