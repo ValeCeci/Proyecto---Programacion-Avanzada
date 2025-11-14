@@ -10,3 +10,15 @@ C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Core\obj\Debug\Proyect
 C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Core\obj\Debug\Proyect..3F7F9F97.Up2Date
 C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Core\obj\Debug\Proyect.Core.dll
 C:\Users\Vale Ceciliano\source\repos\Proyect.Core\Proyect.Core\obj\Debug\Proyect.Core.pdb
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Core.dll
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Core.pdb
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Data.dll
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\EntityFramework.dll
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Data.pdb
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Data.dll.config
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\EntityFramework.xml
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.csproj.AssemblyReference.cache
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.csproj.CoreCompileInputs.cache
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect..3F7F9F97.Up2Date
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.dll
+C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.pdb

@@ -56,6 +56,31 @@ namespace Proyect.Core
             );
         }
 
+        // ---------------------------
+        // Nuevo: Login por Email + Password (texto plano)
+        // Devuelve el objeto User o null si no existe
+        // ---------------------------
+        public User Login(string email, string password)
+        {
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                return null;
 
+            // asume que _repositoryUser.GetAll() devuelve entidad User con Email y Password
+            return _repositoryUser.GetAll()
+                                  .FirstOrDefault(u => string.Equals(u.Email, email, StringComparison.OrdinalIgnoreCase)
+                                                    && u.Password == password);
+        }
+
+        // ---------------------------
+        // Nuevo: Comprueba si ya existe email (útil para registro)
+        // ---------------------------
+        public bool ExistsEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+                return false;
+
+            return _repositoryUser.GetAll()
+                                  .Any(u => string.Equals(u.Email, email, StringComparison.OrdinalIgnoreCase));
+        }
     }
 }
