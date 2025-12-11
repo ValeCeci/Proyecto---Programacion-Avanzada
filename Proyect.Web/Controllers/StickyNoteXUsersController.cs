@@ -1,161 +1,189 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using Proyect.Core;
 using Proyect.Data;
+using Proyect.Web.Filters;
 
 namespace Proyect.Web.Controllers
 {
+    [CustomAuthorize]
     public class StickyNoteXUsersController : BaseController
     {
-        // ==============================================
-        // Muestra todas las relaciones Usuario-Nota
-        // ==============================================
+        // ==========================================================
+        // GET: StickyNoteXUsers
+        // Mostrar SOLO las relaciones del usuario logueado
+        // ==========================================================
         public ActionResult Index()
         {
-            // Obtiene todas las relaciones desde la capa de negocio
-            var stickyNoteXUser = StickyNoteXUserBusiness.GetNotesXUsers(0);
-            return View(stickyNoteXUser.ToList());
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var relations = StickyNoteXUserBusiness
+                .GetNotesXUsers(0)
+                .Where(x => x.UserID == userId)
+                .ToList();
+
+            return View(relations);
         }
 
-        // ==============================================
-        // Muestra el detalle de una relación específica
-        // ==============================================
+        // ==========================================================
+        // GET: StickyNoteXUsers/Details/5
+        // ==========================================================
         public ActionResult Details(int? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
 
-            // Busca la relación específica por ID
-            var stickyNoteXUser = StickyNoteXUserBusiness.GetNotesXUsers((int)id).FirstOrDefault();
-            if (stickyNoteXUser == null)
-            {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var relation = StickyNoteXUserBusiness
+                .GetNotesXUsers((int)id)
+                .FirstOrDefault();
+
+            if (relation == null || relation.UserID != userId)
                 return HttpNotFound();
-            }
 
-            return View(stickyNoteXUser);
+            return View(relation);
         }
 
-        // ==============================================
-        // Vista para crear una nueva relación
-        // ==============================================
+        // ==========================================================
+        // GET: StickyNoteXUsers/Create
+        // No permitimos seleccionar usuario, siempre será el logueado
+        // ==========================================================
         public ActionResult Create()
         {
-            // Llama al método que llena los desplegables (usuarios y notas)
-            SetSelectLists();
+            // Solo mostrar notas disponibles
+            ViewBag.StickynoteID = new SelectList(
+                StickyNoteBusiness.GetNotes(0), "StickynoteID", "Title"
+            );
+
             return View();
         }
 
-        // ==============================================
-        // Acción POST para guardar una nueva relación
-        // ==============================================
+        // ==========================================================
+        // POST: StickyNoteXUsers/Create
+        // ==========================================================
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "StickyUserID,UserID,StickynoteID")] StickyNoteXUser stickyNoteXUser)
+        public ActionResult Create([Bind(Include = "StickynoteID")] StickyNoteXUser stickyNoteXUser)
         {
-            // Si el modelo es válido, se guarda mediante la capa de negocio
             if (ModelState.IsValid)
             {
+                int userId = Convert.ToInt32(Session["UserID"]);
+
+                stickyNoteXUser.UserID = userId;
                 StickyNoteXUserBusiness.SaveOrUpdate(stickyNoteXUser);
+
                 return RedirectToAction("Index");
             }
 
-            // Si hay error de validación, se vuelven a llenar los combos
-            SetSelectLists();
+            ViewBag.StickynoteID = new SelectList(
+                StickyNoteBusiness.GetNotes(0), "StickynoteID", "Title"
+            );
+
             return View(stickyNoteXUser);
         }
 
-        // ==============================================
-        // Vista para editar una relación existente
-        // ==============================================
+        // ==========================================================
+        // GET: StickyNoteXUsers/Edit/5
+        // ==========================================================
         public ActionResult Edit(int? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
 
-            var stickyNoteXUser = StickyNoteXUserBusiness.GetNotesXUsers((int)id).FirstOrDefault();
-            if (stickyNoteXUser == null)
-            {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var relation = StickyNoteXUserBusiness
+                .GetNotesXUsers((int)id)
+                .FirstOrDefault();
+
+            if (relation == null || relation.UserID != userId)
                 return HttpNotFound();
-            }
 
-            SetSelectLists();
-            return View(stickyNoteXUser);
+            ViewBag.StickynoteID = new SelectList(
+                StickyNoteBusiness.GetNotes(0),
+                "StickynoteID",
+                "Title",
+                relation.StickynoteID
+            );
+
+            return View(relation);
         }
 
-        // ==============================================
-        // Acción POST para actualizar una relación existente
-        // ==============================================
+        // ==========================================================
+        // POST: StickyNoteXUsers/Edit/5
+        // ==========================================================
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "StickyUserID,UserID,StickynoteID")] StickyNoteXUser stickyNoteXUser)
+        public ActionResult Edit([Bind(Include = "StickyUserID,StickynoteID")] StickyNoteXUser stickyNoteXUser)
         {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var original = StickyNoteXUserBusiness
+                .GetNotesXUsers(stickyNoteXUser.StickyUserID)
+                .FirstOrDefault();
+
+            // Validar que existe y pertenece al usuario
+            if (original == null || original.UserID != userId)
+                return new HttpStatusCodeResult(401);
+
             if (ModelState.IsValid)
             {
+                stickyNoteXUser.UserID = userId; // mantener propietario
                 StickyNoteXUserBusiness.SaveOrUpdate(stickyNoteXUser);
                 return RedirectToAction("Index");
             }
 
-            SetSelectLists();
+            ViewBag.StickynoteID = new SelectList(
+                StickyNoteBusiness.GetNotes(0),
+                "StickynoteID",
+                "Title",
+                stickyNoteXUser.StickynoteID
+            );
+
             return View(stickyNoteXUser);
         }
 
-        // ==============================================
-        // Vista para confirmar eliminación
-        // ==============================================
+        // ==========================================================
+        // GET: StickyNoteXUsers/Delete/5
+        // ==========================================================
         public ActionResult Delete(int? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
 
-            var stickyNoteXUser = StickyNoteXUserBusiness.GetNotesXUsers((int)id).FirstOrDefault();
-            if (stickyNoteXUser == null)
-            {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var relation = StickyNoteXUserBusiness
+                .GetNotesXUsers((int)id)
+                .FirstOrDefault();
+
+            if (relation == null || relation.UserID != userId)
                 return HttpNotFound();
-            }
 
-            return View(stickyNoteXUser);
+            return View(relation);
         }
 
-        // ==============================================
-        // Acción POST que elimina la relación
-        // ==============================================
+        // ==========================================================
+        // POST: StickyNoteXUsers/Delete/5
+        // ==========================================================
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var relation = StickyNoteXUserBusiness
+                .GetNotesXUsers(id)
+                .FirstOrDefault();
+
+            if (relation == null || relation.UserID != userId)
+                return new HttpStatusCodeResult(401);
+
             StickyNoteXUserBusiness.Delete(id);
+
             return RedirectToAction("Index");
         }
-
-        // ==============================================
-        // Método privado para llenar los combos de Usuario y Nota
-        // ==============================================
-        // ==========================================================
-        // Carga los combos de Usuario y Nota en los formularios Create/Edit
-        // ==========================================================
-        private new void SetSelectLists()
-        {
-            using (var db = new ProyectoEntities())
-            {
-                // Lista de usuarios (usa "User" porque la tabla es singular)
-                ViewBag.UserID = new SelectList(db.User.ToList(), "UserID", "Username");
-
-                // Lista de notas (usa "StickyNote" porque la tabla es singular)
-                ViewBag.StickynoteID = new SelectList(db.StickyNote.ToList(), "StickynoteID", "Title");
-            }
-        }
-
     }
 }

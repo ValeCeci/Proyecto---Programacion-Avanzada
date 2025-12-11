@@ -133,6 +133,7 @@
     <Compile Include="Controllers\StickyNotesController.cs" />
     <Compile Include="Controllers\StickyNoteXUsersController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Filters\CustomAuthorizeAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

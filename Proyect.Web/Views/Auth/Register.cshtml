@@ -15,12 +15,12 @@
 
     <div class="form-group">
         <label for="Username">Usuario</label>
-        <input name="Username" id="Username" class="form-control" type="text" value="" required />
+        <input name="Username" id="Username" class="form-control" type="text" value="@Model?.Username" required />
     </div>
 
     <div class="form-group">
         <label for="Email">Email</label>
-        <input name="Email" id="Email" class="form-control" type="email" value="" required />
+        <input name="Email" id="Email" class="form-control" type="email" value="@Model?.Email" required />
     </div>
 
     <div class="form-group">
@@ -29,5 +29,5 @@
     </div>
 
     <button type="submit" class="btn btn-success">Registrar</button>
-    <a href="@Url.Action("Login", "Auth")" class="btn btn-link">Ya tienes cuenta?</a>
+    <a href="@Url.Action("Login", "Auth")" class="btn btn-link">Volver a Login</a>
 </form>

@@ -10,14 +10,13 @@ namespace Proyect.Core
 {
     public class UserBusiness
     {
-        private readonly IRepositoryUser _repositoryUser; //la clase puede ser seteada solo una vez 
+        private readonly IRepositoryUser _repositoryUser;
         public UserBusiness()
         {
             _repositoryUser = new RepositoryUser();
-
         }
 
-        public bool SaveOrUpdate(User user) //Upsert (Update / Insert)
+        public bool SaveOrUpdate(User user)
         {
             if (user.UserID <= 0)
                 _repositoryUser.Add(user);
@@ -46,8 +45,6 @@ namespace Proyect.Core
 
             if (string.IsNullOrEmpty(value))
                 return users;
-
-            //value = value.ToLower();
 
             return users.Where(x =>
                 (x.Username != null && x.Username.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0) ||

@@ -22,3 +22,15 @@ C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Data\ob
 C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect..49A9455E.Up2Date
 C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect.Data.dll
 C:\Users\GabrielR\Desktop\Clone\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect.Data.pdb
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\bin\Debug\Proyect.Data.dll.config
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\bin\Debug\Proyect.Data.dll
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\bin\Debug\Proyect.Data.pdb
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\bin\Debug\EntityFramework.dll
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\bin\Debug\EntityFramework.xml
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect.Data.csproj.AssemblyReference.cache
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect.Data.csproj.CoreCompileInputs.cache
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect..49A9455E.Up2Date
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect.Data.dll
+C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Data\obj\Debug\Proyect.Data.pdb

@@ -1,50 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using Proyect.Data;
+using Proyect.Web.Filters;
 
 namespace Proyect.Web.Controllers
 {
+    [CustomAuthorize] // Protege todas las acciones: requiere sesión
     public class UsersController : BaseController
     {
-        
         // GET: Users
+        // Muestra SOLO el usuario logueado (puedes usar esto como "perfil" o lista de 1)
         public ActionResult Index()
         {
-            var users = UserBusiness.GetUsers(0);
-            return View(users.ToList());
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var users = UserBusiness.GetUsers(0)
+                .Where(u => u.UserID == userId)
+                .ToList();
+
+            return View(users);
         }
 
-        // GET: Users/Details/5
-        public ActionResult Details(int? id)
+        // GET: Users/Details
+        // Muestra el perfil del usuario logueado
+        public ActionResult Details()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var user = UserBusiness.GetUsers((int)id).FirstOrDefault();
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var user = UserBusiness.GetUsers(0)
+                .FirstOrDefault(u => u.UserID == userId);
+
             if (user == null)
-            {
                 return HttpNotFound();
-            }
+
             return View(user);
         }
 
         // GET: Users/Create
+        // Si quieres permitir registro desde aquí (opcional), mantenlo protegido o no según prefieras.
+        // Normalmente el registro lo maneja AuthController, así que se puede deshabilitar.
         public ActionResult Create()
         {
-            SetSelectLists();
             return View();
         }
 
         // POST: Users/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "UserID,Username,Email,Password")] User user)
@@ -54,64 +56,78 @@ namespace Proyect.Web.Controllers
                 UserBusiness.SaveOrUpdate(user);
                 return RedirectToAction("Index");
             }
-            SetSelectLists();
+
             return View(user);
         }
 
-        // GET: Users/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: Users/Edit
+        // Solo permite editar el propio perfil
+        public ActionResult Edit()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var user = UserBusiness.GetUsers((int)id).FirstOrDefault();
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var user = UserBusiness.GetUsers(0)
+                .FirstOrDefault(u => u.UserID == userId);
+
             if (user == null)
-            {
                 return HttpNotFound();
-            }
-            SetSelectLists();
+
             return View(user);
         }
 
-        // POST: Users/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Users/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "UserID,Username,Email,Password")] User user)
         {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            // Validación: el usuario sólo puede modificar su propio registro
+            if (user.UserID != userId)
+                return new HttpStatusCodeResult(401);
+
             if (ModelState.IsValid)
             {
-                UserBusiness.SaveOrUpdate(user);    
-                return RedirectToAction("Index");
+                // Guarda en texto plano (como tienes en la BD)
+                UserBusiness.SaveOrUpdate(user);
+                return RedirectToAction("Details");
             }
-            SetSelectLists();
+
             return View(user);
         }
 
-        // GET: Users/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: Users/Delete
+        // Confirmación para eliminar su cuenta
+        public ActionResult Delete()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var user = UserBusiness.GetUsers((int)id).FirstOrDefault();
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            var user = UserBusiness.GetUsers(0)
+                .FirstOrDefault(u => u.UserID == userId);
+
             if (user == null)
-            {
                 return HttpNotFound();
-            }
+
             return View(user);
         }
 
-        // POST: Users/Delete/5
+        // POST: Users/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            if (id != userId)
+                return new HttpStatusCodeResult(401);
+
             UserBusiness.Delete(id);
-            return RedirectToAction("Index");
+
+            // Cerrar sesión luego de borrar la cuenta
+            Session.Clear();
+            Session.Abandon();
+
+            return RedirectToAction("Login", "Auth");
         }
     }
 }
