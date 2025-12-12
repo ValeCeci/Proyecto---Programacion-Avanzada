@@ -101,6 +101,7 @@ namespace Proyect.Web.Controllers
         {
             Session.Clear();
             Session.Abandon();
+            ModelState.Clear();
             return RedirectToAction("Login");
         }
     }

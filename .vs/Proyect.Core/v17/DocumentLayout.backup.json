@@ -1,58 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\",
+  "WorkspaceRootPath": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\gabrielr\\desktop\\final\\proyecto---programacion-avanzada\\proyect.web\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\content\\auth.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\content\\auth.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\controllers\\stickynotexuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\controllers\\stickynotexuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\controllers\\stickynotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\controllers\\stickynotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\filters\\customauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\filters\\customauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0311F2A8-FE9C-4DC8-A45E-3BF6EC6F32AA}|Proyect.Core\\Proyect.Core.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.core\\userbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0311F2A8-FE9C-4DC8-A45E-3BF6EC6F32AA}|Proyect.Core\\Proyect.Core.csproj|solutionrelative:proyect.core\\userbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\content\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\content\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\proyect.web\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\views\\users\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\users\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\proyect.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\views\\stickynotes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\stickynotes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|c:\\users\\vale ceciliano\\source\\repos\\proyectofinal\\proyecto---programacion-avanzada\\proyect.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{29A1F01A-146A-4D13-B1CD-FA627FECB454}|Proyect.Web\\Proyect.Web.csproj|solutionrelative:proyect.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +54,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 486,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -78,165 +74,154 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RouteConfig.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\App_Start\\RouteConfig.cs",
-              "RelativeDocumentMoniker": "Proyect.Web\\App_Start\\RouteConfig.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\App_Start\\RouteConfig.cs",
-              "RelativeToolTip": "Proyect.Web\\App_Start\\RouteConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:28:05.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StickyNotesController.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\StickyNotesController.cs",
-              "RelativeDocumentMoniker": "Proyect.Web\\Controllers\\StickyNotesController.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\StickyNotesController.cs",
-              "RelativeToolTip": "Proyect.Web\\Controllers\\StickyNotesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:22:23.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CustomAuthorizeAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Filters\\CustomAuthorizeAttribute.cs",
-              "RelativeDocumentMoniker": "Proyect.Web\\Filters\\CustomAuthorizeAttribute.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Filters\\CustomAuthorizeAttribute.cs",
-              "RelativeToolTip": "Proyect.Web\\Filters\\CustomAuthorizeAttribute.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAuwB4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:19:33.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Proyect.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAkwEgAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T18:19:40.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Web.config",
-              "RelativeDocumentMoniker": "Proyect.Web\\Web.config",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Web.config",
-              "RelativeToolTip": "Proyect.Web\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAADtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-14T17:53:02.951Z",
+              "Title": "auth.css",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Content\\auth.css",
+              "RelativeDocumentMoniker": "Proyect.Web\\Content\\auth.css",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Content\\auth.css",
+              "RelativeToolTip": "Proyect.Web\\Content\\auth.css",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAIwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-12T06:26:24.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Proyect.Web\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Proyect.Web\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAowGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAA7wGcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T18:13:02.553Z"
+              "WhenOpened": "2025-12-12T06:09:46.606Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Auth\\Login.cshtml",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "Proyect.Web\\Views\\Auth\\Login.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAHAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Register.cshtml*",
+              "RelativeToolTip": "Proyect.Web\\Views\\Auth\\Register.cshtml*",
+              "ViewState": "AgIAAAwAAAAAAAAAAIApwB4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T18:15:15.275Z"
+              "WhenOpened": "2025-12-12T06:06:10.315Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FilterConfig.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\App_Start\\FilterConfig.cs",
-              "RelativeDocumentMoniker": "Proyect.Web\\App_Start\\FilterConfig.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\App_Start\\FilterConfig.cs",
-              "RelativeToolTip": "Proyect.Web\\App_Start\\FilterConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:31:25.377Z"
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Login.cshtml*",
+              "RelativeToolTip": "Proyect.Web\\Views\\Auth\\Login.cshtml*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAARwBgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T06:05:51.063Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StickyNoteXUsersController.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\StickyNoteXUsersController.cs",
-              "RelativeDocumentMoniker": "Proyect.Web\\Controllers\\StickyNoteXUsersController.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\StickyNoteXUsersController.cs",
-              "RelativeToolTip": "Proyect.Web\\Controllers\\StickyNoteXUsersController.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAuwLwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:22:56.548Z"
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\StickyNotes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Proyect.Web\\Views\\StickyNotes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\StickyNotes\\Index.cshtml",
+              "RelativeToolTip": "Proyect.Web\\Views\\StickyNotes\\Index.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAARwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T04:23:27.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Proyect.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAIApwBwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T04:23:16.109Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Proyect.Web\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Proyect.Web\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAuwIQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAiwJcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T03:23:58.376Z"
+              "WhenOpened": "2025-12-12T04:21:37.977Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Register.cshtml",
-              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Auth\\Register.cshtml",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Auth\\Register.cshtml",
-              "RelativeToolTip": "Proyect.Web\\Views\\Auth\\Register.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAACAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Users\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Users\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Users\\Profile.cshtml",
+              "RelativeToolTip": "Proyect.Web\\Views\\Users\\Profile.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwFEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T18:16:23.068Z"
+              "WhenOpened": "2025-12-12T04:19:33.363Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "Proyect.Web\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "Proyect.Web\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T18:01:42.152Z"
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Proyect.Web\\Views\\Users\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAIApwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T04:06:17.564Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserBusiness.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Core\\UserBusiness.cs",
-              "RelativeDocumentMoniker": "Proyect.Core\\UserBusiness.cs",
-              "ToolTip": "C:\\Users\\GabrielR\\Desktop\\Final\\Proyecto---Programacion-Avanzada\\Proyect.Core\\UserBusiness.cs",
-              "RelativeToolTip": "Proyect.Core\\UserBusiness.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAuwFIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T17:59:56.972Z"
+              "DocumentIndex": 3,
+              "Title": "dashboard.css",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Content\\dashboard.css",
+              "RelativeDocumentMoniker": "Proyect.Web\\Content\\dashboard.css",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Content\\dashboard.css",
+              "RelativeToolTip": "Proyect.Web\\Content\\dashboard.css",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAYwPIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-12T02:43:10.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Proyect.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Vale Ceciliano\\source\\repos\\ProyectoFinal\\Proyecto---Programacion-Avanzada\\Proyect.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Proyect.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAhwBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T18:19:40.201Z",
+              "EditorCaption": ""
             }
           ]
         }

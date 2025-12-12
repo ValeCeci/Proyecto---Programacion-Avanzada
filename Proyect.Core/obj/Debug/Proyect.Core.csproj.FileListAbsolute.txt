@@ -34,3 +34,15 @@ C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Core\ob
 C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect..3F7F9F97.Up2Date
 C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.dll
 C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.pdb
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Core.dll
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Core.pdb
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Data.dll
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\EntityFramework.dll
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Data.pdb
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\Proyect.Data.dll.config
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\bin\Debug\EntityFramework.xml
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.csproj.AssemblyReference.cache
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.csproj.CoreCompileInputs.cache
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect..3F7F9F97.Up2Date
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.dll
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Core\obj\Debug\Proyect.Core.pdb

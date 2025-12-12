@@ -1,45 +1,55 @@
 ﻿@model IEnumerable<Proyect.Data.User>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Mi Perfil";
 }
 
-<h2>Index</h2>
+<div class="dashboard-container">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th></th>
-    </tr>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UserID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UserID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UserID })
-        </td>
-    </tr>
-}
+        <!-- USER INFO -->
+        <div class="user-info">
+            <div class="avatar">
+                <span>@Session["Username"].ToString()[0]</span>
+            </div>
+            <h3>@Session["Username"]</h3>
+            <p>@Session["UserEmail"]</p>
+        </div>
 
-</table>
+        <!-- MENU -->
+        <nav class="sidebar-menu">
+            <a href="@Url.Action("Index", "Home")">
+                <i class="bi bi-house"></i> Inicio
+            </a>
+
+            <a href="@Url.Action("Index", "StickyNotes")">
+                <i class="bi bi-stickies"></i> Notas
+            </a>
+
+            <a href="@Url.Action("Profile", "Users")">
+                <i class="bi bi-person"></i> Perfil
+            </a>
+        </nav>
+
+        <!-- LOGOUT -->
+        <div class="sidebar-footer">
+            <a href="@Url.Action("Logout", "Auth")" class="logout-btn">
+                <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+        <div class="content-header">
+            <h2>Mi Perfil</h2>
+        </div>
+
+
+        
+    </main>
+</div>

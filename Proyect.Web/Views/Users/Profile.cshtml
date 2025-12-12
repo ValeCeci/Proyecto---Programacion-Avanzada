@@ -1,0 +1,92 @@
+﻿@model Proyect.Data.User
+
+@{
+    ViewBag.Title = "Mi Perfil";
+}
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <!-- USER INFO -->
+        <div class="user-info">
+            <div class="avatar">
+                <span>@Session["Username"].ToString()[0]</span>
+            </div>
+            <h3>@Session["Username"]</h3>
+            <p>@Session["UserEmail"]</p>
+        </div>
+
+        <!-- MENU -->
+        <nav class="sidebar-menu">
+            <a href="@Url.Action("Index", "Home")">
+                <i class="bi bi-house"></i> Inicio
+            </a>
+
+            <a href="@Url.Action("Index", "StickyNotes")">
+                <i class="bi bi-stickies"></i> Notas
+            </a>
+
+            <a href="@Url.Action("Profile", "Users")">
+                <i class="bi bi-person"></i> Perfil
+            </a>
+        </nav>
+
+        <!-- LOGOUT -->
+        <div class="sidebar-footer">
+            <a href="@Url.Action("Logout", "Auth")" class="logout-btn">
+                <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+        <div class="content-header">
+            <h2>Mi Perfil</h2>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-card">
+
+                @if (ViewBag.Success != null)
+                {
+                    <div class="alert alert-success">@ViewBag.Success</div>
+                }
+
+            <form method="post">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.UserID)
+
+                <div class="mb-3">
+                    <label>Usuario</label>
+                    @Html.TextBoxFor(m => m.Username, new { @class = "form-control", required = "required" })
+                </div>
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", disabled = "disabled" })
+                </div>
+
+                <div class="mb-3">
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" value="********" disabled />
+                    <small class="text-muted">La contraseña no se puede editar aquí</small>
+                </div>
+
+                <button type="submit" class="btn-save-profile">
+                    <i class="bi bi-check-circle"></i>
+                    Guardar cambios
+                </button>
+
+            </form>
+
+            </div>
+        </div>
+
+    </main>
+</div>
+

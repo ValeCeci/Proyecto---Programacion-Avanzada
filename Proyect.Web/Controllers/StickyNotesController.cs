@@ -153,9 +153,12 @@ namespace Proyect.Web.Controllers
             if (relation == null)
                 return new HttpStatusCodeResult(401);
 
+            StickyNoteXUserBusiness.Delete(relation.StickyUserID);
+
             StickyNoteBusiness.Delete(id);
 
             return RedirectToAction("Index");
         }
+
     }
 }

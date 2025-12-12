@@ -129,5 +129,32 @@ namespace Proyect.Web.Controllers
 
             return RedirectToAction("Login", "Auth");
         }
+
+        public ActionResult Profile()
+        {
+            int userId = Convert.ToInt32(Session["UserID"]);
+            //var user = UserBusiness.GetById(userId);
+            var user = UserBusiness.GetUsers(0)
+                .FirstOrDefault(u => u.UserID == userId);
+            return View(user);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Profile(User model)
+        {
+            int userId = Convert.ToInt32(Session["UserID"]);
+            var user = UserBusiness.GetUsers(0).FirstOrDefault(u => u.UserID==userId);
+            if (user == null) return HttpNotFound();    
+
+            user.Username = model.Username;
+            UserBusiness.SaveOrUpdate(user);
+
+            Session["Username"] = user.Username;
+
+            ViewBag.Success = "Perfil actualizado correctamente";
+            return View(model);
+        }
+
     }
 }

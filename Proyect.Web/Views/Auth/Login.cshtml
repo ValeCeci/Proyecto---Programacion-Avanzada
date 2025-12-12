@@ -2,28 +2,47 @@
     ViewBag.Title = "Iniciar sesión";
 }
 
-<h2>Iniciar sesión</h2>
+<div class="auth-container">
 
-@if (TempData["Message"] != null)
-{
-    <div class="alert alert-success">@TempData["Message"]</div>
-}
-
-@if (ViewBag.Error != null)
-{
-    <div class="alert alert-danger">@ViewBag.Error</div>
-}
-
-<form method="post" action="@Url.Action("Login", "Auth")" class="form">
-    @Html.AntiForgeryToken()
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input name="email" id="email" class="form-control" type="email" required />
+    <!-- IZQUIERDA -->
+    <div class="auth-left">
+        <h1>¡Bienvenido<br>a NoteHub!</h1>
     </div>
-    <div class="form-group">
-        <label for="password">Contraseña</label>
-        <input name="password" id="password" class="form-control" type="password" required />
+
+    <!-- DERECHA -->
+    <div class="auth-right">
+
+        <div class="auth-box">
+            <h2 class="auth-title">Login</h2>
+            <p class="auth-subtitle">Por favor, inicia sesión en tu cuenta.</p>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            <form method="post" autocomplete="off" action="@Url.Action("Login", "Auth")" class="auth-form">
+                @Html.AntiForgeryToken()
+
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <input name="email" id="email" type="email" autocomplete="off" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <input name="password" id="password" type="password" autocomplete="new-password" required />
+                </div>
+
+                <button type="submit" class="btn-auth">Entrar</button>
+
+                <p class="auth-footer">
+                    ¿No tienes cuenta?
+                    <a href="@Url.Action("Register", "Auth")">Registrarse</a>
+                </p>
+            </form>
+        </div>
+
     </div>
-    <button type="submit" class="btn btn-primary">Entrar</button>
-    <a href="@Url.Action("Register", "Auth")" class="btn btn-link">Registrarse</a>
-</form>
+</div>
+

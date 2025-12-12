@@ -1,33 +1,47 @@
-﻿@model Proyect.Data.User
-@{
-    ViewBag.Title = "Registro";
-}
+﻿<div class="auth-container">
 
-<h2>Registro</h2>
-
-@if (ViewBag.Error != null)
-{
-    <div class="alert alert-danger">@ViewBag.Error</div>
-}
-
-<form method="post" action="@Url.Action("Register", "Auth")" class="form">
-    @Html.AntiForgeryToken()
-
-    <div class="form-group">
-        <label for="Username">Usuario</label>
-        <input name="Username" id="Username" class="form-control" type="text" value="@Model?.Username" required />
+    <!-- IZQUIERDA -->
+    <div class="auth-left">
+        <h1>Crea<br>Cuenta<br>en NoteHub</h1>
     </div>
 
-    <div class="form-group">
-        <label for="Email">Email</label>
-        <input name="Email" id="Email" class="form-control" type="email" value="@Model?.Email" required />
-    </div>
+    <!-- DERECHA -->
+    <div class="auth-right">
+        <div class="auth-box">
 
-    <div class="form-group">
-        <label for="Password">Contraseña</label>
-        <input name="Password" id="Password" class="form-control" type="password" required />
-    </div>
+            <h2 class="auth-title">Registro</h2>
+            <p class="auth-subtitle">Completa los datos para registrarte.</p>
 
-    <button type="submit" class="btn btn-success">Registrar</button>
-    <a href="@Url.Action("Login", "Auth")" class="btn btn-link">Volver a Login</a>
-</form>
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            <form method="post" autocomplete="off" action="@Url.Action("Register", "Auth")" class="auth-form">
+                @Html.AntiForgeryToken()
+
+                <div class="input-group">
+                    <label>Nombre de Usuario</label>
+                    <input name="Username" id="Username" type="text" autocomplete="off" value="@(Model?.Username ?? "")" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <input name="Email" id="Email" type="email" autocomplete="off" value="@(Model?.Email ?? "")" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <input name="Password" id="Password" type="password" autocomplete="new-password" required />
+                </div>
+
+                <button type="submit" class="btn-auth">Registrar</button>
+
+                <p class="auth-footer">
+                    ¿Ya tienes cuenta?
+                    <a href="@Url.Action("Login", "Auth")">Volver al Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

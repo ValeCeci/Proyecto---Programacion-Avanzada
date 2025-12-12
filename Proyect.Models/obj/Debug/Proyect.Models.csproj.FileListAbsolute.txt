@@ -10,3 +10,9 @@ C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Models\
 C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Models\obj\Debug\Proyect.Models.csproj.CoreCompileInputs.cache
 C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Models\obj\Debug\Proyect.Models.dll
 C:\Users\GabrielR\Desktop\Final\Proyecto---Programacion-Avanzada\Proyect.Models\obj\Debug\Proyect.Models.pdb
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Models\bin\Debug\Proyect.Models.dll
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Models\bin\Debug\Proyect.Models.pdb
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Models\obj\Debug\Proyect.Models.csproj.AssemblyReference.cache
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Models\obj\Debug\Proyect.Models.csproj.CoreCompileInputs.cache
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Models\obj\Debug\Proyect.Models.dll
+C:\Users\Vale Ceciliano\source\repos\ProyectoFinal\Proyecto---Programacion-Avanzada\Proyect.Models\obj\Debug\Proyect.Models.pdb

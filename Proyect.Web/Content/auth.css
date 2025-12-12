@@ -1,0 +1,125 @@
+﻿.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    padding-top: 20px;
+}
+
+/* PANEL IZQUIERDO */
+.auth-left {
+    width: 40%;
+    height: 600px;
+    background: linear-gradient(135deg, #a770ef, #cf8bf3, #fdb99b);
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .auth-left h1 {
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+/* PANEL DERECHO */
+.auth-right {
+    width: 40%;
+    height: 600px;
+    background: white;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja del formulario */
+.auth-box {
+    width: 80%;
+}
+
+/* TITULO */
+.auth-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.auth-subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+    .input-group label {
+        font-weight: 600;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+        transition: all 0.2s ease;
+    }
+
+        .input-group input:focus {
+            border-color: #8e46ff;
+            box-shadow: 0 0 6px rgba(142, 70, 255, 0.4);
+        }
+
+/* Botón */
+.btn-auth {
+    width: 100%;
+    padding: 12px;
+    background: #8a52ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+    .btn-auth:hover {
+        background: #7a45e6;
+    }
+
+/* Footer */
+.auth-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+    .auth-footer a {
+        color: #8a52ff;
+        font-weight: 600;
+    }
+.input-group {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 20px;
+}
+
+    .input-group .form-control {
+        border-radius: 8px;
+        padding: 12px;
+    }
+
+    .input-group .input-group-text {
+        border-radius: 8px;
+        background-color: #f1f1f1;
+    }
+
+    .input-group .form-control:focus {
+        border-color: #7d5fff;
+        box-shadow: 0 0 8px rgba(125, 95, 255, 0.3);
+    }
