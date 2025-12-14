@@ -47,6 +47,34 @@
             <h2>Inicio</h2>
         </div>
 
-        <!-- Pablito aquí iría su parte -->
+        <!-- RESUMEN DE NOTAS -->
+        <div class="stats-grid">
+
+            <div class="stat-card pending">
+                <h3>Pendientes</h3>
+                <p>@ViewBag.Pendientes</p>
+            </div>
+
+            <div class="stat-card progress">
+                <h3>En Proceso</h3>
+                <p>@ViewBag.EnProceso</p>
+            </div>
+
+            <div class="stat-card completed">
+                <h3>Completadas</h3>
+                <p>@ViewBag.Completadas</p>
+            </div>
+
+        </div>
+
+        <!-- ACCIONES RÁPIDAS -->
+        <div class="quick-actions">
+            <a href="@Url.Action("Index", "StickyNotes")"
+               class="action-btn edit">
+                Nueva nota
+            </a>
+
+        </div>
+
     </main>
 </div>

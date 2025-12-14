@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyect.Core;
+using Proyect.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +10,31 @@ namespace Proyect.Web.Controllers
 {
     public class HomeController : Controller
     {
+
+        StickyNoteXUserBusiness stickyUserBusiness = new StickyNoteXUserBusiness();
+
         public ActionResult Index()
         {
-            return View();
-        }
+            if (Session["UserID"] == null)
+                return RedirectToAction("Login", "Auth");
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            int userId = (int)Session["UserID"];
 
-            return View();
-        }
+            var notesXUser = stickyUserBusiness
+                .GetNotesXUsers(0)
+                .Where(x => x.UserID == userId)
+                .ToList();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            var notes = notesXUser
+                .Select(x => x.StickyNote)
+                .ToList();
+
+            ViewBag.Pendientes = notes.Count(n => n.Status == "Pendiente");
+            ViewBag.EnProceso = notes.Count(n => n.Status == "En Proceso");
+            ViewBag.Completadas = notes.Count(n => n.Status == "Completado");
 
             return View();
         }
     }
+
 }

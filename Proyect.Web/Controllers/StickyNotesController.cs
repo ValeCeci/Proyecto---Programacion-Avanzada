@@ -11,18 +11,36 @@ namespace Proyect.Web.Controllers
     public class StickyNotesController : BaseController
     {
         // GET: StickyNotes
-        public ActionResult Index()
+        public ActionResult Index(string status, string search)
         {
             int userId = Convert.ToInt32(Session["UserID"]);
 
-            // Obtener solo las notas del usuario logueado
             var notes = StickyNoteXUserBusiness
                 .GetNotesXUsers(0)
                 .Where(x => x.UserID == userId)
                 .Select(x => x.StickyNote)
-                .ToList();
+                .AsQueryable();
 
-            return View(notes);
+            // 🔹 Filtro por estado
+            if (!string.IsNullOrEmpty(status))
+            {
+                notes = notes.Where(n => n.Status == status);
+            }
+
+            // 🔍 Búsqueda por título o descripción
+            if (!string.IsNullOrEmpty(search))
+            {
+                notes = notes.Where(n =>
+                    n.Title.Contains(search) ||
+                    n.Description.Contains(search)
+                );
+            }
+
+            // Para mantener valores en la vista
+            ViewBag.CurrentStatus = status;
+            ViewBag.Search = search;
+
+            return View(notes.ToList());
         }
 
         // GET: StickyNotes/Details/5
