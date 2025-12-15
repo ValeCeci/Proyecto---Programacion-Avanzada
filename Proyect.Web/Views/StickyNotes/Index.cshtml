@@ -45,150 +45,241 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="content">
-        <div class="content-header">
+        @{
+            var currentStatus = Request.QueryString["status"];
+        }
+
+        <div class="content-header notes-header">
+
             <h2>Mis Notas</h2>
-            <button class="btn-new-note" data-bs-toggle="modal" data-bs-target="#createModal">
+
+            <!-- BUSCADOR -->
+            <form method="get" class="notes-search notes-search-inline">
+
+                @if (!string.IsNullOrEmpty(currentStatus))
+                {
+                    <input type="hidden" name="status" value="@currentStatus" />
+                }
+
+                <input type="text"
+                       name="search"
+                       placeholder="Buscar por título o descripción..."
+                       value="@ViewBag.Search"
+                       class="search-input" />
+
+                <button type="submit" class="search-btn">
+                    Buscar
+                </button>
+
+            </form>
+
+            <!-- BOTÓN NUEVA NOTA -->
+            <button class="btn-new-note"
+                    data-bs-toggle="modal"
+                    data-bs-target="#createModal">
                 Nueva Nota
             </button>
+
         </div>
+
+        <!-- FILTROS POR ESTADO -->
+        <div class="notes-filters">
+            <a href="@Url.Action("Index", "StickyNotes")"
+               class="filter-pill @(string.IsNullOrEmpty(currentStatus) ? "active" : "")">
+                Todas
+            </a>
+
+            <a href="@Url.Action("Index", "StickyNotes", new { status = "Pendiente" })"
+               class="filter-pill pending @(currentStatus == "Pendiente" ? "active" : "")">
+                Pendientes
+            </a>
+
+            <a href="@Url.Action("Index", "StickyNotes", new { status = "En Proceso" })"
+               class="filter-pill progress @(currentStatus == "En Proceso" ? "active" : "")">
+                En Proceso
+            </a>
+
+            <a href="@Url.Action("Index", "StickyNotes", new { status = "Completado" })"
+               class="filter-pill completed @(currentStatus == "Completado" ? "active" : "")">
+                Completadas
+            </a>
+        </div>
+
 
         <div class="notes-grid">
 
-            @foreach (var note in Model)
+            @if (Model == null || !Model.Any())
             {
-                <div class="note-card">
-                    <h3>@note.Title</h3>
-
-                    <p class="note-description">
-                        @note.Description
+                <div class="empty-notes">
+                    <h3>No hay notas disponibles</h3>
+                    <p>
+                        No se encontraron notas para este estado.
+                        Si deseas agregar una, presioná el botón
+                        <strong>“Nueva Nota”</strong>.
                     </p>
 
-                    <span class="note-status status-@note.Status.ToLower().Replace(" ", "-")">
-                        @note.Status
-                    </span>
+                    <button class="btn-new-note"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#createModal">
+                        Nueva Nota
+                    </button>
+                </div>
+            }
+            else
+            {
+                foreach (var note in Model)
+                {
+        <div class="note-card">
+            <h3>@note.Title</h3>
 
-                    @if (note.DueDate != null)
+            <p class="note-description">
+                @note.Description
+            </p>
+
+            <span class="note-status status-@note.Status.ToLower().Replace(" ", "-")">
+                @note.Status
+            </span>
+
+            @if (note.DueDate.HasValue)
+            {
+                <div class="note-date">
+                    <strong>Fecha límite:</strong>
+                    @note.DueDate.Value.ToString("dd/MM/yyyy")
+                </div>
+
+                if (note.Status != "Completado")
+                {
+                    if (note.DueDate.Value.Date < DateTime.Today)
                     {
-                        <div class="note-date">
-                            <strong>Fecha límite:</strong>
-                            @note.DueDate.Value.ToString("dd/MM/yyyy")
-                        </div>
+                        <span class="note-warning expired">
+                            ⚠️ Vencida
+                        </span>
                     }
+                    else if (note.DueDate.Value.Date == DateTime.Today)
+                    {
+                        <span class="note-warning today">
+                            ⏰ Vence hoy
+                        </span>
+                    }
+                }
+            }
 
-                    <div class="note-actions">
-                        <button class="action-btn edit"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal-@note.StickynoteID">
-                            Editar
-                        </button>
 
-                        <button type="button"
-                                class="action-btn delete"
-                                data-bs-toggle="modal"
-                                data-bs-target="#deleteModal-@note.StickynoteID">
-                            Eliminar
-                        </button>
+            <div class="note-actions">
+                <button class="action-btn edit"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editModal-@note.StickynoteID">
+                    Editar
+                </button>
 
-                    </div>
-                </div>
+                <button class="action-btn delete"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal-@note.StickynoteID">
+                    Eliminar
+                </button>
+            </div>
+        </div>
 
-                <div class="modal fade" id="editModal-@note.StickynoteID" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
+                    <!-- MODAL EDITAR -->
+                    <div class="modal fade" id="editModal-@note.StickynoteID" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
 
-                            <div class="modal-header">
-                                <h5 class="modal-title">Editar Nota</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-
-                            <form method="post" action="@Url.Action("Edit", "StickyNotes")">
-                                @Html.AntiForgeryToken()
-                                <input type="hidden" name="StickynoteID" value="@note.StickynoteID" />
-
-                                <div class="modal-body">
-
-                                    <div class="mb-3">
-                                        <label>Título</label>
-                                        <input name="Title" class="form-control" value="@note.Title" required />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label>Descripción</label>
-                                        <textarea name="Description" class="form-control">@note.Description</textarea>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label>Fecha límite</label>
-                                        <input type="date" name="DueDate"
-                                               value="@(note.DueDate?.ToString("yyyy-MM-dd"))"
-                                               class="form-control" />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label>Estado</label>
-                                        <select name="Status" class="form-control">
-                                            <option @(note.Status == "Pendiente" ? "selected" : "")>Pendiente</option>
-                                            <option @(note.Status == "En Proceso" ? "selected" : "")>En Proceso</option>
-                                            <option @(note.Status == "Completado" ? "selected" : "")>Completado</option>
-                                        </select>
-                                    </div>
-
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Editar Nota</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
 
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-primary">Actualizar</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal fade" id="deleteModal-@note.StickynoteID" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header bg-danger text-white">
-                                <h5 class="modal-title">Confirmar eliminación</h5>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>
-                                    ¿Estás seguro de que deseas eliminar la nota
-                                    <strong>@note.Title</strong>?
-                                </p>
-                                <p class="text-muted">
-                                    Esta acción no se puede deshacer.
-                                </p>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="button"
-                                        class="btn btn-secondary"
-                                        data-bs-dismiss="modal">
-                                    Cancelar
-                                </button>
-
-                                <!-- CONFIRMA ELIMINACIÓN -->
-                                <form method="post" action="@Url.Action("Delete", "StickyNotes")">
+                                <form method="post" action="@Url.Action("Edit", "StickyNotes")">
                                     @Html.AntiForgeryToken()
-                                    <input type="hidden" name="id" value="@note.StickynoteID" />
-                                    <button type="submit" class="btn btn-danger">
-                                        Sí, eliminar
-                                    </button>
+                                    <input type="hidden" name="StickynoteID" value="@note.StickynoteID" />
+
+                                    <div class="modal-body">
+
+                                        <div class="mb-3">
+                                            <label>Título</label>
+                                            <input name="Title" class="form-control" value="@note.Title" required />
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label>Descripción</label>
+                                            <textarea name="Description" class="form-control">@note.Description</textarea>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label>Fecha límite</label>
+                                            <input type="date"
+                                                   name="DueDate"
+                                                   value="@(note.DueDate?.ToString("yyyy-MM-dd"))"
+                                                   class="form-control" />
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label>Estado</label>
+                                            <select name="Status" class="form-control">
+                                                <option value="Pendiente" @(note.Status == "Pendiente" ? "selected" : "")>Pendiente</option>
+                                                <option value="En Proceso" @(note.Status == "En Proceso" ? "selected" : "")>En Proceso</option>
+                                                <option value="Completado" @(note.Status == "Completado" ? "selected" : "")>Completado</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    </div>
                                 </form>
 
                             </div>
-
                         </div>
                     </div>
-                </div>
 
+                    <!-- MODAL ELIMINAR -->
+                    <div class="modal fade" id="deleteModal-@note.StickynoteID" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <div class="modal-header bg-danger text-white">
+                                    <h5 class="modal-title">Confirmar eliminación</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>
+                                        ¿Estás seguro de que deseas eliminar la nota
+                                        <strong>@note.Title</strong>?
+                                    </p>
+                                    <p class="text-muted">
+                                        Esta acción no se puede deshacer.
+                                    </p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        Cancelar
+                                    </button>
+
+                                    <form method="post" action="@Url.Action("Delete", "StickyNotes")">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@note.StickynoteID" />
+                                        <button type="submit" class="btn btn-danger">
+                                            Sí, eliminar
+                                        </button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
             }
 
         </div>
+
     </main>
 </div>
 

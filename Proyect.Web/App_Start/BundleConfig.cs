@@ -24,7 +24,10 @@ namespace Proyect.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/auth.css",
+                      "~/Content/dashboard.css"));
+
         }
     }
 }
